@@ -1,0 +1,1624 @@
+{
+  "date": "2026-11-14T01:28:18.691Z",
+  "baseURL": "http://127.0.0.1:3001",
+  "tests": [
+    {
+      "test": "extract objects, metadata, duplicates, alpha, selection ZIP and modal",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/e9d6000d-f7e9-4259-a4c5-a3f1b92d48bd",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/eda55997-b6b0-4cea-8243-7a260717eefc",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/fb8ce183-65c4-4b76-82f6-007272f5284c",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/b18cde07-faaf-4b0e-926c-e78d5438c4e3",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/324ae73f-7d51-41b8-a98e-a72bc35d385c",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/b8dcc237-0162-43e0-ad0d-122f62f51ef5",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "conversion PNG and JPG with rotation and download bytes",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/4b2c01f3-5e63-46ac-8b88-032167b2d5d1",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/5d05913e-08b5-4f37-8a59-26df15eacddb",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/ff5aadc1-56fc-4918-a8f0-61b6252a8efc",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/eca79353-7e42-43d4-91f3-de2e79c94c42",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/0c580f69-8106-4e65-980c-43ac3c8ec92a",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/9b2fc27a-a011-42df-8a20-924eee497d0d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/031cc1db-4b19-4734-b470-eb4e966c8639",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "text empty, invalid signature, corrupt PDF and recoverable reset",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/72e868ba-2c28-4a70-93e4-2d13a9b9702c",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "extract gray real image",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/fd4de1dc-0b18-49f2-8796-2c0c617fe1e8",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "extract mono real image",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/ca25a64b-52a3-4a1a-a44c-7c3d799799be",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "unsupported mask reports partial, huge canvas refused",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/954baee2-371f-4b96-bca6-662964255585",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "cooperative cancellation and no obsolete results",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/a3308001-ee6a-4402-b6ed-263ab9d7ebfc",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/5b2feb43-d50d-4f79-ade8-60fc91971a47",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/ff5cf497-3e7d-4cf1-ba29-2c21e5d3beb8",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/8513a7fb-a282-41ee-affa-75f7f0fb5730",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/fc2e8f0c-5edf-4efc-9c49-73ab6b816be6",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/00bfee52-926f-4b93-9590-d655d0afddf9",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/c135df42-548d-420a-9735-ccf9add70dc5",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/f19d52d1-9eda-453d-a365-724fb70acecf",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/4e6c8d4c-232f-4f55-8260-41835ee2f685",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/026a915c-138a-438e-b59e-1d18a62f53e0",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/c0e8de82-eefc-4d30-adc0-278b4bebc64d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/cc3d1da7-07be-47e7-ba8b-4aa2c411c681",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/33d1db4e-3aeb-4a37-933c-016902edb820",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/4cea9659-c0da-4301-a2f3-90252132c712",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/af396287-0747-4a75-ad3c-22d05a5e80e8",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/9d5f59a6-bfee-4784-8829-685d2be5dac7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/edafc033-dfed-4182-8e83-bc0f1621b769",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/d22f6b12-c7fa-4a5b-bbd0-bca1fa42fdb2",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/1749f9ed-1176-4939-acf0-0e41fd2f0e81",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/c9c51601-a7e9-4a03-ad88-46c5b2279361",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/edec5f6f-fe14-498a-a2a6-e33b067b6325",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/07917de6-2551-4880-a497-8ba670a30f60",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/753d6c4c-652f-49ed-bc6b-9a31ba9d6027",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/fbc47495-9f0d-4d98-b628-4e792f14c0c0",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/3c5a7a45-7893-47c8-8fe7-d90340415a6d",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "actual drag drop, back, theme persisted and help keyboard",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/help/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "responsive 360 and screenshots",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/b3738d47-b39d-4567-aa1a-f8abe83eab31",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/3b3c93c9-d6e7-46a1-9d0a-87e6fa5cc216",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/5344247e-30f8-4f68-8306-42deda138394",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/473554a7-fe8c-4379-90de-f04d9de9d6da",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "responsive 768 and screenshots",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/c5186e74-1ce4-4cf3-8d44-ce84d5356992",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/8aca8ecc-ad28-4206-a091-9ea2e5bc7538",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/e48b5fe2-450b-433e-b02a-4f5abaf25b1e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/24e19f88-3d0b-4d02-b0b5-31e8278804e0",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "responsive 1280 and screenshots",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/460fe7dc-0471-4179-b950-571ccecb35aa",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/0f0317f8-c745-4230-acd4-2cc71fc6fb2f",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/e6cda3aa-cda2-45c4-ba41-b9349b979eb7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/6c902243-e362-44da-b08f-1fad861fe082",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "200 percent browser layout equivalent and dark mobile",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "local AES256 password incorrect, correct and cancellation",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "visible selection, dimensions, stable reverse order and all ZIP",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/b0e29f5a-37a2-4693-a8aa-44c8d5809caa",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/0ea8ff74-49af-4727-b108-32dd25579732",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/ae01b10f-d352-44ff-8d54-6732c8b7e2d4",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/b34d3f88-68e5-43a4-81b2-6ce999dbeb2a",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "object URL lifecycle reset and replacement",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/d1ee68de-6bbc-46b4-a0b0-6afa159b6e77",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/74d42336-0d05-481d-b15e-aa63c91f4080",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/a7ef0b23-adfd-40a6-a8e6-9c1988a2664a",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/8541478f-9900-4420-983d-e5e49d295873",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "cancel ZIP preserves results and cancel load allows retry",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/fa0217c8-7488-440e-b41e-d66b6fa8335e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/de50373c-5b1a-49df-a81f-53c078d50843",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/903b338f-fdc6-4502-8e88-b5e0f4cf21b1",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/167f5eb7-464e-42d8-95e8-2a29a9d4b2f9",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/f0646861-3a95-423a-bfea-79ababe73ffe",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/9a186d1f-9234-4c62-88ce-0c9bf61a502a",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/c3a17cdd-0975-4cb7-9f6a-cd5e098ca754",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/e5b634a3-be32-440a-87b8-d2dfb29f74a7",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/4b2e3528-43fc-42c7-b309-7fc8a9fcef3d",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/48e1aa00-bc7c-485a-b44f-c225a91d6163",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/ae949d55-3e9a-40c6-bc36-1c153bfbf3e3",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/07a22779-ff8f-492a-8bd4-4f5fb56b0c3e",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/4e72f2f5-1376-43da-82f1-b406bbd790ca",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/4ce3852e-4d06-4e5f-b4df-ac6b445b2312",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/b1602fa4-4676-4c29-ba40-ca47d6453bd6",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/633c918a-feeb-4cc9-8e2b-d1af02978d24",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/01775b01-7e3c-4e69-86c7-4acd1fcf33cc",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/9907216c-9606-4349-abcc-6e8c9ed0a76f",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/18963920-cad8-47b4-b3fd-3bf2c35184f5",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/79538447-6087-4c92-a675-5f3595547fce",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/f3ebb021-cda5-4cdc-b26c-ab4ae9557248",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/d7ffff8b-5a34-412a-82a4-bce3534b158c",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/f6c14b63-7522-42f2-be87-475f04537d06",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/209bd1d5-2a61-41d0-872c-4598fdd5b9a4",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/497da3f4-f47c-4559-aaf6-16b1371e0f39",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/978d8029-84ff-408b-831b-6a1f2bea6135",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/bdf14b90-6c97-4ac0-aef4-ac13915cd2a5",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "keyboard trap, mobile selection toolbar, help and automated accessibility",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/7fb65c88-a1e7-4cb7-a794-736511ef4bcf",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/1fe88a76-b4af-47b6-959c-5a93ba8e2bff",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/0010685f-89a0-4a71-adae-99ccda1ff584",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/0d1eabd4-545b-4889-8238-3bc956738915",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/help/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "partial extraction retains compatible object and page-level incident",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        },
+        {
+          "url": "blob:http://127.0.0.1:3001/d66aa2f2-f01e-476d-b722-ace61506c971",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    },
+    {
+      "test": "preventive file limit fails before parsing and permits retry",
+      "requests": [
+        {
+          "url": "http://127.0.0.1:3001/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/3o8wsag911jjw.css",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0-5ng9lz5yf_2.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/0gh9t1dspbkxm.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+          "method": "GET"
+        }
+      ],
+      "violations": []
+    }
+  ]
+}

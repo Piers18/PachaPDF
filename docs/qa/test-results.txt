@@ -1,0 +1,28 @@
+
+> pachapdf@1.0.0 test
+> playwright test
+
+
+Running 19 tests using 1 worker
+
+  ✓   1 [chromium] › tests/app.spec.ts:95:1 › extract objects, metadata, duplicates, alpha, selection ZIP and modal (4.9s)
+  ✓   2 [chromium] › tests/app.spec.ts:170:1 › conversion PNG and JPG with rotation and download bytes (905ms)
+  ✓   3 [chromium] › tests/app.spec.ts:217:1 › text empty, invalid signature, corrupt PDF and recoverable reset (683ms)
+  ✓   4 [chromium] › tests/app.spec.ts:244:3 › extract gray real image (1.8s)
+  ✓   5 [chromium] › tests/app.spec.ts:244:3 › extract mono real image (1.8s)
+  ✓   6 [chromium] › tests/app.spec.ts:253:1 › unsupported mask reports partial, huge canvas refused (7.7s)
+  ✓   7 [chromium] › tests/app.spec.ts:279:1 › cooperative cancellation and no obsolete results (671ms)
+  ✓   8 [chromium] › tests/app.spec.ts:290:1 › actual drag drop, back, theme persisted and help keyboard (659ms)
+  ✓   9 [chromium] › tests/app.spec.ts:326:3 › responsive 360 and screenshots (768ms)
+  ✓  10 [chromium] › tests/app.spec.ts:326:3 › responsive 768 and screenshots (4.1s)
+  ✓  11 [chromium] › tests/app.spec.ts:326:3 › responsive 1280 and screenshots (4.2s)
+  ✓  12 [chromium] › tests/app.spec.ts:360:1 › 200 percent browser layout equivalent and dark mobile (754ms)
+  ✓  13 [chromium] › tests/app.spec.ts:376:1 › local AES256 password incorrect, correct and cancellation (1.2s)
+  ✓  14 [chromium] › tests/app.spec.ts:404:1 › visible selection, dimensions, stable reverse order and all ZIP (882ms)
+  ✓  15 [chromium] › tests/app.spec.ts:443:1 › object URL lifecycle reset and replacement (4.0s)
+  ✓  16 [chromium] › tests/app.spec.ts:486:1 › cancel ZIP preserves results and cancel load allows retry (3.4s)
+  ✓  17 [chromium] › tests/app.spec.ts:512:1 › keyboard trap, mobile selection toolbar, help and automated accessibility (2.4s)
+  ✓  18 [chromium] › tests/app.spec.ts:558:1 › partial extraction retains compatible object and page-level incident (1.8s)
+  ✓  19 [chromium] › tests/app.spec.ts:572:1 › preventive file limit fails before parsing and permits retry (399ms)
+
+  19 passed (44.0s)

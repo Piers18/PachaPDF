@@ -1,0 +1,15 @@
+﻿UI,Pantalla,Ruta,Elementos,Estados,Prioridad
+01,Landing + carga,/,"Hero, barra navegación, card dropzone, privacidad, cómo funciona, FAQs, footer","empty, dragover, validating, valid, error",P0
+02,Archivo cargado y selección de herramienta,/workspace,"Resumen de PDF, botón cambiar/eliminar, cards Extract Images / Pages to Images, continuar","ready, unsupported, password-required",P0
+03,Configuración de extracción,/workspace/extract,"Selector todas/intervalo páginas, exclusión opcional de miniaturas, aviso sobre limitaciones, empezar","default, invalid-range, processing",P0
+04,Configuración de conversión,/workspace/convert,"Selector PNG/JPG, escala 1x/1.5x/2x, calidad JPG, todas/páginas específicas, estimación orientativa","default, invalid-range, processing",P0
+05,Procesamiento,/workspace/processing,"Archivo, operación, progreso por páginas procesadas, indicador sin porcentaje si no se conoce, cancelar","pending, running, cancelling, cancelled, failed",P0
+06,Resultados de extracción,/workspace/results?mode=extract,"Resumen total, galería, página origen, tamaño, resolución, selección, filtros, descargar","success, empty, partial, error",P0
+07,Resultados de conversión,/workspace/results?mode=convert,"Galería de páginas con números de página, acciones seleccionar/descargar, formato","success, partial, error",P0
+08,Vista previa,modal,"Dialog de imagen con zoom fit/100%, descargar, anterior/siguiente, cerrar","opened, image-error",P1
+09,Preparación de ZIP,modal/progress,"Cantidad de imágenes, progreso o indeterminado, error, cierre tras descargar","creating, completed, failed",P0
+10,Estados de error y avisos,shared,"Toasts, banner por PDF cifrado/corrupto, problema de memoria, objeto no soportado, error por archivo","invalid-file, protected, corrupted, out-of-memory, unsupported",P0
+11,Sin resultados,shared,"Ilustración simple, mensaje no hay imágenes incrustadas, convertir páginas como alternativa","zero-images, filtered-empty",P0
+12,Ayuda / FAQ / privacidad,/help,"Diferencia entre extraer y convertir, procesamiento local, tipos PDF, consejos, limitaciones",default,P1
+13,Acerca de + PachaTech,footer,"Enlace a pachatech.pro, atribución, sin métricas que suban el PDF",default,P1
+14,Responsive y tema,global,"Header móvil, zonas táctiles, grid responsivo, modo oscuro, focus visible, reducción movimiento","mobile, tablet, desktop, dark, light",P0

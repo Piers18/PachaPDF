@@ -1,0 +1,55 @@
+{
+  "name": "pachapdf",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NEXT_TELEMETRY_DISABLED=1 next dev --hostname 127.0.0.1",
+    "prebuild": "node scripts/pdf-assets.mjs",
+    "build": "cross-env NEXT_TELEMETRY_DISABLED=1 next build",
+    "start": "cross-env NO_UPDATE_CHECK=1 serve out -l 3000",
+    "preview": "cross-env NO_UPDATE_CHECK=1 serve out -l 3000",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src scripts tests --max-warnings=0",
+    "fixtures": "node tests/fixtures.mjs",
+    "test": "playwright test",
+    "predev": "node scripts/pdf-assets.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slot": "^1.2.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.577.0",
+    "next": "16.4.6",
+    "pdfjs-dist": "6.5.438",
+    "radix-ui": "^1.8.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.58.0",
+    "@tailwindcss/postcss": "^4.2.0",
+    "@types/node": "^25.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.4.6",
+    "pdf-lib": "^1.17.1",
+    "serve": "^14.2.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.1"
+    }
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

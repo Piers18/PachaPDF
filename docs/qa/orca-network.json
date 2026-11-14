@@ -1,0 +1,253 @@
+{
+  "id": "784343e7-993c-46de-aae2-d19408b2f823",
+  "ok": true,
+  "result": {
+    "entries": [
+      {
+        "url": "http://127.0.0.1:3000/__nextjs_font/geist-latin.woff2",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "font/woff2",
+        "timestamp": 1794618588954
+      },
+      {
+        "url": "http://127.0.0.1:3000/?_rsc=d_HBULV8cXOOjBVa",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/x-component",
+        "timestamp": 1794618647560
+      },
+      {
+        "url": "http://127.0.0.1:3000/?_rsc=d_HBULV8cXOOjBVa",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/x-component",
+        "timestamp": 1794618671661
+      },
+      {
+        "url": "http://127.0.0.1:3000/_next/static/chunks/node_modules_pdfjs-dist_build_pdf_mjs_0ikqf4fukmkd0._.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794618674561
+      },
+      {
+        "url": "http://127.0.0.1:3000/pdfjs/6.5.438/pdf.worker.min.mjs",
+        "method": "GET",
+        "timestamp": 1794618674660
+      },
+      {
+        "url": "blob:http://127.0.0.1:3000/50d7ee94-c88d-4fa8-9bdf-6814e74469dd",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/jpeg",
+        "timestamp": 1794618686261
+      },
+      {
+        "url": "blob:http://127.0.0.1:3000/e0cbe72d-4319-4857-8511-0e24c1d45ac0",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/jpeg",
+        "timestamp": 1794618686261
+      },
+      {
+        "url": "blob:http://127.0.0.1:3000/6306a20c-ba16-4096-b4dc-d0d1fa4bb8f6",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794618694661
+      },
+      {
+        "url": "blob:http://127.0.0.1:3000/674144c4-6a46-4573-b60d-f0bf9aa59841",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794618694661
+      },
+      {
+        "url": "blob:http://127.0.0.1:3000/3cc9c2b3-9851-4bc6-8591-21c29a2088cf",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794618694661
+      },
+      {
+        "url": "blob:http://127.0.0.1:3000/2cbd1f85-8948-400b-bf5f-ac07268bb44e",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794618694661
+      },
+      {
+        "url": "http://127.0.0.1:3000/_next/static/chunks/src_app_globals_162hn9oqc8uss.css",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/css",
+        "timestamp": 1794618856562
+      },
+      {
+        "url": "http://127.0.0.1:3000/_next/static/chunks/src_app_globals_162hn9oqc8uss.css",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/css",
+        "timestamp": 1794618857363
+      },
+      {
+        "url": "http://127.0.0.1:3000/?_rsc=d_HBULV8cXOOjBVa",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/x-component",
+        "timestamp": 1794618857463
+      },
+      {
+        "url": "http://127.0.0.1:3000/_next/static/chunks/src_app_globals_162hn9oqc8uss.css",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/css",
+        "timestamp": 1794618977163
+      },
+      {
+        "url": "http://127.0.0.1:3000/_next/static/chunks/src_app_globals_162hn9oqc8uss.css",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/css",
+        "timestamp": 1794619016564
+      },
+      {
+        "url": "http://127.0.0.1:3001/",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/html",
+        "timestamp": 1794619018023
+      },
+      {
+        "url": "http://127.0.0.1:3001/brand/pachapdf-logo-aprobado.png",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/3janyb1a3mzxo.css",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "text/css",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/0xa--a0onjdk5.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/2_ftxsj96j0n1.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/1rihuxxdfe9g-.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/12d541l82sulo.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/2bzgy6-g0ggfz.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/1tqy0ul--668c.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/3g4p1n9w-zr_v.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619018024
+      },
+      {
+        "url": "http://127.0.0.1:3001/_next/static/chunks/1ia0yd0_j5bsg.js",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "application/javascript",
+        "timestamp": 1794619058964
+      },
+      {
+        "url": "http://127.0.0.1:3001/pdfjs/6.5.438/pdf.worker.min.mjs",
+        "method": "GET",
+        "timestamp": 1794619059054
+      },
+      {
+        "url": "blob:http://127.0.0.1:3001/72e5f2fa-dd87-49c2-93a9-6782f06649c7",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/jpeg",
+        "timestamp": 1794619137965
+      },
+      {
+        "url": "blob:http://127.0.0.1:3001/4848a5d0-9d36-4072-a3f7-227d3e17b767",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/jpeg",
+        "timestamp": 1794619137965
+      },
+      {
+        "url": "blob:http://127.0.0.1:3001/7c3b54e9-d21c-4872-b32d-7fff8fddae8c",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794619150220
+      },
+      {
+        "url": "blob:http://127.0.0.1:3001/e6b7e9c8-18a4-4ea6-aabd-a931663e38fb",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794619150220
+      },
+      {
+        "url": "blob:http://127.0.0.1:3001/60718dd8-457d-4aa9-91db-cadce459f3b5",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794619150220
+      },
+      {
+        "url": "blob:http://127.0.0.1:3001/a2136f37-2aff-4843-8248-bf779d805d39",
+        "method": "GET",
+        "status": 200,
+        "mimeType": "image/png",
+        "timestamp": 1794619150220
+      }
+    ],
+    "truncated": false
+  },
+  "_meta": {
+    "runtimeId": "6414c0e6-286e-464b-b0c3-30039a4cd935"
+  }
+}

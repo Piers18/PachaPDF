@@ -1,0 +1,32 @@
+{
+  "id": "9d9f0c90-adc6-4f56-a762-6d61751b7602",
+  "ok": true,
+  "result": {
+    "platform": "darwin",
+    "scannedAt": 1794619732627,
+    "ports": [
+      {
+        "id": "*:3001:54059",
+        "bindHost": "*",
+        "connectHost": "localhost",
+        "port": 3001,
+        "pid": 54059,
+        "processName": "node",
+        "protocol": "http",
+        "kind": "workspace",
+        "owner": {
+          "worktreeId": "e34f6236-274c-4185-bc1e-a5b49d3c63b6::/Users/piero/Documents/PachaPDF",
+          "repoId": "e34f6236-274c-4185-bc1e-a5b49d3c63b6",
+          "displayName": "PachaPDF",
+          "path": "/Users/piero/Documents/PachaPDF",
+          "confidence": "cwd"
+        },
+        "advertisedUrl": "http://localhost:3001"
+      }
+    ],
+    "executionHostId": "local"
+  },
+  "_meta": {
+    "runtimeId": "6414c0e6-286e-464b-b0c3-30039a4cd935"
+  }
+}

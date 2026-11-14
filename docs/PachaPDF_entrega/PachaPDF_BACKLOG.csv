@@ -1,0 +1,41 @@
+﻿Epica,ID,Historia,Prioridad,Criterio de aceptacion
+Carga,HU01,Seleccionar PDF desde el dispositivo,P0,"Dado que no hay archivo, cuando elijo un PDF válido, se muestra nombre, peso y páginas."
+Carga,HU02,Arrastrar y soltar un PDF,P0,Al soltar un PDF sobre la dropzone se carga; el estado hover es visible y accesible.
+Carga,HU03,Validar el contenido del PDF,P0,"Si el archivo no es PDF o la biblioteca no lo abre, aparece error y se permite reintentar."
+Carga,HU04,Ver metadatos del archivo,P0,"Tras cargar, aparecen nombre, tamaño y número de páginas correctos."
+Carga,HU05,Reemplazar o eliminar archivo,P0,"Al reemplazar se limpian previews, blobs y selecciones del PDF anterior."
+Carga,HU06,Gestionar PDF dañado,P0,"Si la lectura falla, se informa sin bloquear el resto de la interfaz."
+Carga,HU07,Abrir PDF protegido con contraseña,P1,"Si la librería pide contraseña, se solicita localmente y se informa si es incorrecta."
+Extracción,HU08,Extraer imágenes incrustadas,P0,Se extraen los objetos compatibles con una lista de incidencias si hay fallos parciales.
+Extracción,HU09,Mostrar página de origen,P0,Cada resultado indica la página del PDF en la que se encontró.
+Extracción,HU10,Preservar calidad disponible,P0,"Se evita recomprimir sin necesidad; cuando hay conversión, se informa el formato de salida."
+Extracción,HU11,Informar cero imágenes,P0,"Si no hay resultados, se presenta un estado vacío con opción de convertir páginas."
+Extracción,HU12,Extraer rango de páginas,P1,"Se aceptan expresiones como 1-3,5; entradas fuera de rango muestran error."
+Extracción,HU13,Filtrar por dimensiones,P1,Filtrar por ancho y alto devuelve sólo resultados que cumplen.
+Extracción,HU14,Omitir imágenes pequeñas,P2,Un umbral configurable oculta íconos pequeños sin borrar datos originales.
+Extracción,HU15,Identificar imágenes duplicadas,P2,Las duplicadas detectadas se señalan y pueden ocultarse opcionalmente.
+Conversión,HU16,Convertir páginas completas,P0,Cada página solicitada produce una imagen descargable con texto y gráficos renderizados.
+Conversión,HU17,Elegir formato PNG/JPG,P0,La salida y extensión de descarga coinciden con el formato escogido.
+Conversión,HU18,Elegir escala/calidad,P1,Escala y calidad ajustan resolución/peso estimado de la salida.
+Conversión,HU19,Elegir páginas específicas,P1,Se procesan sólo los números solicitados y se respeta su orden natural.
+Conversión,HU20,Previsualizar páginas antes de convertir,P1,Se muestra miniatura de páginas y selección con carga progresiva.
+Galería,HU21,Ver galería de resultados,P0,Cada resultado muestra miniatura y controles; imágenes no cargadas muestran fallback.
+Galería,HU22,Ampliar imagen en modal,P1,Un clic/Enter abre vista previa navegable; Esc cierra y devuelve foco.
+Galería,HU23,"Consultar dimensiones, formato y tamaño",P1,Cada tarjeta expone metadatos correctos o indica no disponible.
+Galería,HU24,Seleccionar imágenes específicas,P0,Checkbox por tarjeta altera el contador y el conjunto para ZIP.
+Galería,HU25,Seleccionar/deseleccionar todas,P1,El control respeta el conjunto de resultados visibles al aplicar filtros.
+Galería,HU26,Ordenar resultados,P2,Orden por página y dimensiones es estable y reversible.
+Descargas,HU27,Descargar imagen individual,P0,Al hacer clic se descarga el archivo correcto sin enviar datos a red.
+Descargas,HU28,Descargar todas en ZIP,P0,"El ZIP incluye los resultados y nombres únicos, conservando extensiones."
+Descargas,HU29,Descargar seleccionadas en ZIP,P0,"Si hay selección, se comprimen sólo esas imágenes; cero selección deshabilita acción."
+Descargas,HU30,Nombres descriptivos de archivos,P0,"Nombre incluye modo, página y número; sin colisiones y saneado."
+Descargas,HU31,Mostrar progreso al crear ZIP,P1,Mientras se prepara ZIP se muestra feedback y errores recuperables.
+UX,HU32,Informar avance procesamiento,P0,"Progreso se basa en páginas completadas, sin porcentaje inventado."
+UX,HU33,Mostrar mensajes claros,P0,Éxito/error/advertencia explican causa y próxima acción sin tecnicismos.
+UX,HU34,Ser responsive,P0,"Se usa correctamente en 360px, 768px, 1280px y con zoom 200%."
+UX,HU35,Cambiar tema claro/oscuro,P1,Se puede alternar y recordar preferencia local sin subir datos.
+UX,HU36,Cancelar operación,P1,Se detiene el proceso cuando se pueda y se liberan recursos parciales.
+UX,HU37,Accesibilidad de teclado/lectores,P0,"Foco visible, etiquetas, mensajes anunciados y orden lógico."
+UX,HU38,Explicar privacidad local,P0,Se explica que archivos no se envían a un servidor y se verifica ausencia de uploads.
+UX,HU39,Empezar nuevamente sin recargar,P0,Nuevo archivo limpia estado del anterior y permite procesar inmediatamente.
+UX,HU40,Consultar ayuda breve,P1,Explica diferencias entre modos y limitaciones con lenguaje sencillo.
