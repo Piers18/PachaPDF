@@ -1,72 +1,216 @@
+<div align="center">
+  <img src="public/brand/pachapdf-logo-transparente.png" alt="Logo de PachaPDF" width="96" />
+
 # PachaPDF
 
-Extrae objetos de imagen de un PDF o convierte páginas completas a PNG/JPG. **Next.js App Router + TypeScript + Tailwind CSS + shadcn/ui**, exportado como sitio estático. PDF.js y JSZip trabajan en el navegador: no hay API de subida, backend de documentos, telemetría ni fuentes remotas.
+**Tus PDF, tus imágenes, tu privacidad.**
 
-![PachaPDF en escritorio](docs/qa/landing-1280.png)
+Extrae imágenes incrustadas y convierte páginas PDF a PNG o JPG, directamente en tu navegador.
 
-## Ejecutar
+**Next.js · TypeScript · Tailwind CSS · shadcn/ui · PDF.js**
 
-Requisitos: Node.js 22.13+ compatible con PDF.js 6 y Next.js 16; verificado con Node 26.0.0 y npm 11.12.1.
+[Inicio rápido](#inicio-rápido) · [Arquitectura](#arquitectura) · [Pruebas](#calidad-y-pruebas) · [Documentación](#documentación)
 
-```sh
-npm install
+Un producto de [PachaTech](https://pachatech.pro/).
+
+</div>
+
+## El proyecto
+
+PachaPDF permite recuperar imágenes de documentos y exportar páginas completas sin enviar los archivos a un servicio de conversión. El usuario elige un PDF, configura la operación y descarga los resultados individualmente o en un ZIP. No necesita crear una cuenta.
+
+El proyecto aborda retos de desarrollo frontend como procesamiento binario, integración de Web Workers, gestión de memoria, cancelación de tareas y validación de archivos. La aplicación se distribuye como sitio estático: el procesamiento del documento ocurre en el cliente.
+
+## Vista previa
+
+![Galería de resultados de PachaPDF en escritorio](docs/qa/results-desktop.png)
+
+<details>
+<summary>Ver la página de inicio y la experiencia móvil</summary>
+
+### Inicio
+
+<img src="docs/qa/landing-1280.png" alt="Página de inicio con carga de PDF, herramientas y preguntas frecuentes" width="800" />
+
+### Resultados en móvil
+
+<img src="docs/qa/results-360.png" alt="Galería móvil con filtros, selección y descarga de imágenes" width="280" />
+
+</details>
+
+Las capturas muestran la interfaz y documentos de prueba. Las imágenes obtenidas en la aplicación dependen del PDF que seleccione el usuario.
+
+## Funcionalidades
+
+| Área | Capacidades |
+| --- | --- |
+| Carga | Selección y arrastre de archivos, validación de firma y apertura, metadatos y contraseña local. |
+| Extracción | Detección de objetos de imagen compatibles, exportación PNG, dimensiones y página de origen. |
+| Conversión | Páginas completas a PNG o JPG, escala 1×/1.5×/2×, calidad JPG y selección por intervalos. |
+| Galería | Miniaturas, filtros por dimensiones, detección de duplicados, orden y selección de resultados visibles. |
+| Vista previa | Navegación entre imágenes, encajar o mostrar al 100 %, cierre con Escape y gestión de foco. |
+| Descargas | Archivos individuales y ZIP de todos los resultados o de la selección, con nombres únicos. |
+| Experiencia | Tema claro/oscuro, diseño responsive, progreso por páginas y cancelación cooperativa. |
+
+### Extraer y convertir son operaciones diferentes
+
+**Extraer imágenes** busca objetos raster incrustados en el PDF y los exporta como PNG a partir de los píxeles decodificados por PDF.js. Conserva las dimensiones del objeto en los casos compatibles; no garantiza recuperar el archivo original bit a bit, sus metadatos ni todos sus perfiles de color.
+
+**Convertir páginas** renderiza la página completa, incluidos texto y gráficos vectoriales. Es la alternativa cuando el contenido no existe como una imagen independiente o su extracción no es compatible.
+
+## Stack tecnológico
+
+| Tecnología | Responsabilidad |
+| --- | --- |
+| Next.js App Router + React | Rutas, interfaz y exportación estática. |
+| TypeScript | Tipado de estado, operaciones y resultados. |
+| Tailwind CSS + shadcn/ui + Radix | Estilos y componentes de interfaz, incluidos diálogos y controles. |
+| PDF.js | Apertura y decodificación del PDF, acceso a objetos y renderizado de páginas. |
+| Canvas, Blob y Object URLs | Construcción de imágenes y vistas previas temporales. |
+| Web Crypto | Hash SHA-256 para detectar exportaciones idénticas. |
+| JSZip | Generación local de paquetes de descarga. |
+| Playwright + Axe | Pruebas de navegador y comprobaciones automatizadas de accesibilidad. |
+
+Las versiones exactas se encuentran en [package.json](package.json) y [package-lock.json](package-lock.json).
+
+## Arquitectura
+
+```text
+src/
+├── app/                       # Inicio, ayuda, layout y estilos globales
+├── components/
+│   ├── workspace.tsx          # Estado y coordinación del flujo de trabajo
+│   ├── page-preview.tsx       # Miniaturas progresivas de páginas
+│   ├── header.tsx             # Navegación y preferencia de tema
+│   ├── marketing.tsx          # Secciones informativas, ayuda y pie
+│   └── ui/                    # Componentes base de interfaz
+└── lib/
+    ├── pdf.ts                 # Adaptador PDF, rangos, canvas y descargas
+    └── utils.ts               # Utilidades compartidas
+public/
+├── brand/                     # Identidad y favicons
+└── pdfjs/                     # Worker y recursos de PDF.js servidos localmente
+scripts/                       # Preparación de recursos de PDF.js
+tests/                        # Fixtures y pruebas de navegador
+docs/                         # Requisitos, matriz de implementación y evidencia
+```
+
+### Decisiones técnicas
+
+- **Procesamiento local:** el PDF se lee mediante las APIs del navegador. El sitio no implementa rutas de subida ni un backend de conversión.
+- **Recursos de PDF.js locales:** worker, fuentes, CMaps y decodificadores se sirven junto con la aplicación, sin depender de un CDN durante el procesamiento.
+- **Trabajo secuencial y límites preventivos:** las páginas se procesan con concurrencia acotada y límites de canvas/resultados para reducir picos de memoria.
+- **Cancelación y estado consistente:** `AbortController`, cancelación de tareas de render y guardas de generación evitan que una operación obsoleta reemplace los resultados actuales.
+- **Recursos temporales:** se liberan canvas y Object URLs al cancelar, reemplazar o quitar un documento. Los PDF y resultados no se persisten en el navegador; sólo se guarda la preferencia de tema.
+- **Resultados parciales explícitos:** las incidencias se muestran sin ocultar los objetos recuperados ni confundir un fallo con un documento sin imágenes.
+- **ZIP sin recompresión:** se utiliza `STORE` para empaquetar las imágenes, que ya están comprimidas.
+
+## Inicio rápido
+
+### Requisitos
+
+- Node.js **22.13 o superior**, según `engines` del proyecto.
+- npm y un navegador moderno. La suite automatizada se ha ejecutado en Chromium.
+
+```bash
+git clone https://github.com/Piers18/PachaPDF.git
+cd PachaPDF
+npm ci
 npm run dev
-# http://127.0.0.1:3000
 ```
 
-`predev` copia worker, CMaps, fuentes estándar, perfiles ICC, decodificadores y WASM de la versión instalada a `public/pdfjs/6.5.438/`. No descarga fuentes durante el build. Los scripts desactivan la telemetría de Next y la comprobación de actualizaciones de serve.
+Abre **http://127.0.0.1:3000**. No se requieren claves API ni variables de entorno para ejecutar la aplicación.
 
-```sh
-npm run typecheck
-npm run lint
-npm run build
-npm run start
-# sirve out/ en http://localhost:3000 (detén antes el servidor dev)
-```
+Los hooks `predev` y `prebuild` preparan automáticamente los recursos locales de la versión instalada de PDF.js.
 
-`npm run preview` hace lo mismo que `start`: sirve la exportación, sin ejecutar un backend Next. Para otro puerto: `npx cross-env NO_UPDATE_CHECK=1 serve out -l 3001`.
+### Comandos disponibles
 
-## Capacidades
+| Comando | Uso |
+| --- | --- |
+| `npm run dev` | Iniciar el entorno de desarrollo. |
+| `npm run typecheck` | Verificar tipos TypeScript. |
+| `npm run lint` | Ejecutar ESLint sin advertencias permitidas. |
+| `npm run build` | Generar la exportación estática en `out/`. |
+| `npm start` / `npm run preview` | Servir `out/` en el puerto 3000, después del build. |
+| `npm run fixtures` | Generar los documentos de prueba. |
+| `npm test` | Ejecutar Playwright contra un servidor ya iniciado. |
 
-- Selección o drag/drop de un PDF; firma y apertura real; nombre, bytes y páginas reales; contraseña local y reintento.
-- Extracción de imágenes desde la lista de operadores/objetos de PDF.js. Se exportan **PNG reconstruidos de los píxeles decodificados**, con dimensiones, transparencia y página de origen; no son universalmente los archivos originales ni sus streams comprimidos.
-- Conversión separada de páginas con texto/vectores a PNG o JPG; escala 1×/1.5×/2×, calidad JPG y rangos como `1-3,5` validados antes de expandirse.
-- Vistas de página progresivas, galería lazy, selección, dimensiones/peso/formato, ancho/alto mínimos, omisión de pequeñas, duplicados por SHA-256 y orden reversible.
-- Modal accesible Radix con navegación, encajar/100 %, Esc y devolución de foco; descargas individuales, ZIP de todas o seleccionadas y progreso real.
-- Tema persistente, navegación de pasos sin recargar, cancelación cooperativa y liberación de recursos al reemplazar/quitar un documento.
+## Calidad y pruebas
 
-La matriz técnica y las 40 historias con evidencia están en [docs/IMPLEMENTACION.md](docs/IMPLEMENTACION.md). La [ayuda y privacidad](docs/AYUDA-Y-PRIVACIDAD.md) complementa `/help/`.
+La verificación funcional documentada incluye **19 pruebas aprobadas en Chromium**, además de TypeScript, ESLint y build estático. La suite comprueba:
 
-## Límites explícitos
+- Extracción de objetos JPEG, imágenes con transparencia, gris y monocromo; documentos sin imágenes y resultados parciales.
+- Conversión PNG/JPG mediante inspección de firmas binarias, dimensiones y transparencia de las descargas.
+- Contenido y nombres de los archivos ZIP, incluida la selección de un subconjunto.
+- PDF cifrado con AES-256, contraseña incorrecta, corrupción, límites de tamaño y recuperación del flujo.
+- Cancelación, reemplazo de documentos y liberación de Object URLs.
+- Navegación por teclado, foco de diálogos, tema y layouts de 360, 768 y 1280 px.
+- Comprobaciones con Axe y zoom CSS al 200 % en los escenarios documentados.
 
-Las máscaras de opacidad ya resueltas por PDF.js se conservan como alfa en los casos probados; las máscaras de color dependientes de composición y los grupos inline no compatibles generan incidencias. Vectores, mosaicos, imágenes en patrones, perfiles de imprenta y codificaciones especiales pueden necesitar la conversión de página. No se promete extracción universal ni identidad binaria con el original.
+Durante esa ejecución se observaron **376 peticiones**, sin solicitudes externas, subidas ni excepciones JavaScript no controladas. Las pruebas fallan ante peticiones externas o métodos `POST`, `PUT` y `PATCH`. Esta evidencia corresponde a los escenarios ejecutados; no constituye una auditoría universal de todos los PDF o navegadores.
 
-Se usan límites preventivos: 150 MB de PDF, 1000 páginas por lote, 24 megapíxeles y 16384 px por lado en cada canvas, 256 MB de blobs acumulados. Son guardas de aplicación, no una garantía de memoria para todo dispositivo; la decodificación PDF.js también consume RAM antes de producir un resultado. Se muestran hasta 200 miniaturas de página; el campo de rangos permite elegir páginas posteriores. Usa menos páginas o menor escala ante errores. El ZIP usa `STORE`: las imágenes ya están comprimidas y se evita recomprimirlas innecesariamente.
+### Reproducir las pruebas
 
-La cancelación se comprueba entre páginas, objetos y callbacks de ZIP; detiene render tasks y carga. Un paso nativo de canvas/decodificación o compresión ya iniciado puede tardar hasta devolver control. Los resultados cancelados no reemplazan los actuales. Los documentos y resultados no se guardan en localStorage ni IndexedDB; sólo la preferencia de tema. Sirve la app por HTTPS o localhost para las funciones seguras del navegador, incluido SHA-256.
-
-## Pruebas
-
-```sh
+```bash
 npm run fixtures
 npx playwright install chromium
 npm run build
-# en otra terminal:
-npx cross-env NO_UPDATE_CHECK=1 serve out -l 3001
-# pruebas contra los archivos estáticos:
-PDF_TEST_URL=http://127.0.0.1:3001 npm test
 ```
 
-Los fixtures se generan con `pdf-lib`/`sharp` sólo en `tests/`; incluye texto/vectores, JPEG, PNG alfa, duplicados, rotación, gris/monocromo, máscara, resultado parcial, corrupción, canvas grande y 80 páginas. `oversize.pdf` es un archivo disperso generado y excluido de Git. `password.pdf` es un fixture AES-256, clave **pacha-test**; para regenerarlo opcionalmente: `python3 -m pip install pypdf cryptography` y `python3 tests/encrypt-fixture.py`.
+En una terminal, sirve la exportación:
 
-Las pruebas fallan ante peticiones externas, POST/PUT/PATCH o errores JS no controlados; verifican bytes descargados, contenido de ZIP y alfa. [Evidencia y capturas](docs/qa/) incluyen anchos 360/768/1280, modo oscuro, modal y zoom CSS 200 %. Axe y teclado cubren escenarios concretos, no certifican WCAG ni sustituyen una revisión con lector de pantalla. Safari WebDriver fue rechazado por automatización remota desactivada; Firefox y lector de pantalla no fueron probados.
+```bash
+npx cross-env NO_UPDATE_CHECK=1 serve out -l 3001
+```
 
-## Arquitectura y despliegue
+En otra terminal:
 
-`src/app/` contiene rutas estáticas `/` y `/help/`; `src/components/workspace.tsx` mantiene el estado efímero y coordina tareas con AbortController/generaciones; `src/lib/pdf.ts` contiene validación de rangos, adaptación de objetos, canvas y descargas. Los componentes shadcn de Input/Progress/Checkbox fueron generados por CLI; Button usa CVA/Slot y los diálogos usan Radix. `marketing.tsx` aporta secciones, ayuda y pie global. No hay rutas API ni server actions.
+```bash
+npx cross-env PDF_TEST_URL=http://127.0.0.1:3001 npm test
+```
 
-`npm run build` produce `out/`. Publica **el contenido completo de `out/`** en un hosting estático con MIME correcto para `.mjs`, `.wasm` y `.bcmap`, y soporte de `help/index.html`. Configura build `npm run build` y directorio de salida `out`; no uses un proceso `next start`. Las rutas de recursos asumen despliegue en la raíz de un dominio; para subcarpetas se debe adaptar y probar `basePath` y las rutas de PDF.js/marca. No hay dominio, sitemap con URL inventada ni despliegue público configurado.
+Los fixtures se generan localmente con `pdf-lib` y `sharp`. El fixture cifrado incluido usa la contraseña de prueba `pacha-test`; su regeneración opcional está descrita en el [informe técnico](docs/IMPLEMENTACION.md).
 
-El logo original aprobado se conserva intacto. La cabecera y los favicons 16/32/48/180/192/512 usan ahora una variante con fondo exterior transparente y blanco interior del documento conservado visualmente. Detalles de edición y archivos en [docs/LOGO-TRANSPARENTE.md](docs/LOGO-TRANSPARENTE.md).
+Los [resultados de la suite](docs/qa/test-results.txt), [registros de red](docs/qa/network-summary.json) y [capturas](docs/qa/) están disponibles para revisión.
 
-En esta entrega queda una terminal Orca sirviendo la exportación en **http://127.0.0.1:3001**: `term_6503c26e-2fbc-4f3e-9098-a0998405d64a` (PID de servidor 54059 al verificar). No se publicó a un destino externo.
+## Alcance y limitaciones
+
+La [matriz de las 40 historias](docs/IMPLEMENTACION.md#matriz-hu01hu40) registra **36 implementadas y 4 parciales**, con evidencia y límites por requisito.
+
+- **Fidelidad:** la extracción produce PNG reconstruidos; no preserva universalmente streams originales, perfiles ni composiciones. Vectores, máscaras y codificaciones especiales pueden requerir conversión de página.
+- **Memoria:** hay guardas de 150 MB por PDF, 1000 páginas por lote, 24 megapíxeles/16384 px por lado y 256 MB de resultados acumulados. No garantizan disponibilidad de RAM en todos los dispositivos.
+- **Miniaturas de configuración:** se muestran las primeras 200 páginas; las posteriores pueden seleccionarse por intervalo.
+- **Cancelación:** es cooperativa. Un paso nativo de decodificación o canvas puede terminar antes de devolver el control.
+- **Compatibilidad y accesibilidad:** quedan pendientes pruebas en Safari/Firefox, zoom nativo, dispositivos físicos y revisión manual con lector de pantalla. Axe y las pruebas de teclado no equivalen a una certificación WCAG.
+
+El corpus de codificaciones especiales y perfiles de color pendientes se detalla en el informe técnico.
+
+## Despliegue
+
+`npm run build` genera un sitio estático en `out/`. Configura tu hosting con:
+
+| Configuración | Valor |
+| --- | --- |
+| Comando de instalación | `npm ci` |
+| Comando de build | `npm run build` |
+| Directorio de publicación | `out` |
+
+Sirve el contenido completo, incluidos los recursos PDF.js, con MIME adecuado para `.mjs`, `.wasm` y `.bcmap`, y soporte de `help/index.html`. Usa HTTPS fuera de localhost para las APIs que requieren contexto seguro, como Web Crypto.
+
+Las rutas actuales asumen la raíz de un dominio. Un despliegue en subcarpeta requiere adaptar y verificar `basePath` y las rutas de recursos. La exportación se sirve como archivos estáticos; no requiere `next start`.
+
+## Documentación
+
+| Documento | Contenido |
+| --- | --- |
+| [Implementación y evidencia](docs/IMPLEMENTACION.md) | Matriz HU01–HU40, decisiones, codificaciones comprobadas, QA y pendientes. |
+| [Ayuda y privacidad](docs/AYUDA-Y-PRIVACIDAD.md) | Diferencias entre modos, procesamiento local y recomendaciones. |
+| [Especificación de producto](docs/PachaPDF_entrega/PachaPDF_ESPECIFICACION_COMPLETA.md) | Requisitos y diseño de referencia. El stack final utiliza Next.js en lugar del Angular propuesto originalmente. |
+| [Backlog](docs/PachaPDF_entrega/PachaPDF_BACKLOG.csv) | Historias de usuario y criterios de aceptación. |
+| [Identidad transparente](docs/LOGO-TRANSPARENTE.md) | Variante del logo y favicons; el original aprobado se conserva. |
+
+## Autor y contacto
+
+Desarrollado por **[Piers18](https://github.com/Piers18)** para **[PachaTech](https://pachatech.pro/)**.
+
+Para reportar un problema o proponer una mejora, abre un [issue](https://github.com/Piers18/PachaPDF/issues) con los pasos de reproducción y la versión del navegador. Si el problema depende de un PDF, utiliza un documento de muestra sin información sensible.
